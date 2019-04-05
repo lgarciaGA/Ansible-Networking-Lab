@@ -1,0 +1,11 @@
+---
+- name: Update banner message
+  hosts: cisco
+  connection: network_cli
+  gather_facts: no
+
+  tasks:
+
+  - name: Update banner message from file
+    ios_config:
+      src: banner.txt
